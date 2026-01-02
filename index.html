@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مساعد الدراسة الذكي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+
+<div class="container">
+    <header>
+        <h1>🕒 مساعد الدراسة الذكي</h1>
+        <div class="mode-toggle">
+            <button id="digitalBtn" class="active">رقمي</button>
+            <button id="graphicalBtn">رسومي</button>
+            <button id="themeToggle">وضع ليلي</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="timer-section">
+            <div id="digitalTimer" class="timer active">25:00</div>
+            <canvas id="graphicalTimer" class="timer" width="250" height="250"></canvas>
+
+            <div class="controls">
+                <button id="startBtn">ابدأ</button>
+                <button id="pauseBtn">إيقاف</button>
+                <button id="resetBtn">إعادة</button>
+            </div>
+        </section>
+
+        <section>
+            <h2>📋 المهام</h2>
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="أضف مهمة">
+                <button id="addTaskBtn">إضافة</button>
+            </div>
+            <ul id="taskList"></ul>
+        </section>
+
+        <section>
+            <h2>🕋 مواقيت الصلاة</h2>
+            <p id="locationStatus">جاري تحديد الموقع...</p>
+            <ul id="prayerTimesList"></ul>
+        </section>
+
+        <section>
+            <h2>⚙ الإعدادات</h2>
+            <label>وقت الدراسة (دقيقة)</label>
+            <input type="number" id="sessionTime" value="25">
+            <label>وقت الراحة (دقيقة)</label>
+            <input type="number" id="breakTime" value="5">
+        </section>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

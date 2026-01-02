@@ -1,0 +1,109 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2071') center/cover fixed;
+    padding: 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(255,255,255,0.9);
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+body.dark .container {
+    background: rgba(15,23,42,0.95);
+    color: white;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    main { grid-template-columns: 1fr; }
+}
+
+section {
+    background: rgba(255,255,255,0.7);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+body.dark section {
+    background: rgba(30,41,59,0.7);
+}
+
+.timer-section {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.timer {
+    font-size: 4rem;
+    display: none;
+}
+
+.timer.active {
+    display: block;
+}
+
+.controls button,
+.mode-toggle button {
+    padding: 12px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background: #1e293b;
+    color: white;
+    cursor: pointer;
+}
+
+button.active {
+    background: #007BFF;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
